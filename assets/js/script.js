@@ -2,6 +2,8 @@ let playerScore = 0;
 let computerScore = 0;
 const resultDiv = document.getElementById('result');
 const selectionsDiv = document.getElementById('selections');
+const playerScoreSpan = document.getElementById('player-score');
+const computerScoreSpan = document.getElementById('computer-score');
 //const computerChoice = getComputerChoice();
 const options = ['rock', 'paper', 'scissors'];
 
@@ -56,7 +58,7 @@ function getResult(playerChoice, computerChoice) {
 
 function win(playerChoice, computerChoice) {
     playerScore++;
-    document.getElementById('player-score').innerHTML = playerScore;
+    playerScoreSpan.innerHTML = playerScore;
    //selectionsDiv.innerHTML = `
    // <p>You chose: ${playerChoice}</p>
     //<p>Computer chose: ${computerChoice}</p>
@@ -66,7 +68,7 @@ function win(playerChoice, computerChoice) {
 
 function lose(playerChoice, computerChoice) {
     computerScore++;
-    document.getElementById('computer-score').innerHTML = computerScore;
+    computerScoreSpan.innerHTML = computerScore;
    // selectionsDiv.innerHTML = `
    // <p>You chose: ${playerChoice}</p>
     //<p>Computer chose: ${computerChoice}</p>
@@ -85,7 +87,9 @@ function draw(playerChoice, computerChoice) {
 function resetGame() {
     playerScore = 0;
     computerScore = 0;
-    document.getElementById('player-score').innerHTML = playerScore;
-    document.getElementById('computer-score').innerHTML = computerScore;
+    playerScoreSpan.innerHTML = playerScore;
+    computerScoreSpan.innerHTML = computerScore;
+    selectionsDiv.innerHTML = ``;
+    resultDiv.innerHTML = ``;
 }
 
