@@ -1,15 +1,13 @@
 let playerScore = 0;
 let computerScore = 0;
-let resultDiv = document.getElementById('result');
-let selectionsDiv = document.getElementById('selections');
+const resultDiv = document.getElementById('result');
+const selectionsDiv = document.getElementById('selections');
+const computerChoice = getComputerChoice();
 
-
-getComputerChoice() {
+function getComputerChoice() {
     let options = ["rock", "paper", "scissors"];
     let randomNumber = Math.floor(Math.random() * 3);
     return options[randomNumber];
-    let computerChoice = options[randomNumber];
-    console.log(computerChoice);
 }
 
 let buttons = document.getElementsByTagName('button');
@@ -19,8 +17,9 @@ for (let button of buttons) {
             resetGame();
         } else {
             let playerChoice=this.getAttribute('data-type');
-            //getResult(playerChoice, computerChoice);
-            console.log(playerChoice);
+            getResult(playerChoice, computerChoice);
+            //console.log(playerChoice);
+            //console.log(computerChoice);
         }
     });
 }
@@ -66,6 +65,7 @@ function lose(playerChoice, computerChoice) {
     `;
     resultDiv.innerHTML = `<p>Computer Wins ...</p>`;
 }
+
 function draw(playerChoice, computerChoice) {
     selectionsDiv.innerHTML = `
     <p>You chose: ${playerChoice}</p>
@@ -80,3 +80,4 @@ function resetGame() {
     document.getElementById('player-score').innerHTML = playerScore;
     document.getElementById('computer-score').innerHTML = computerScore;
 }
+
