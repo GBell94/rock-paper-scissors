@@ -1,5 +1,6 @@
 let playerScore = 0;
 let computerScore = 0;
+let computerChoice;
 const resultDiv = document.getElementById('result');
 const selectionsDiv = document.getElementById('selections');
 const playerScoreSpan = document.getElementById('player-score');
@@ -47,19 +48,19 @@ function getResult(playerChoice, computerChoice) {
         case "rockscissors":
         case "paperrock":
         case "scissorspaper":
-        win()
+        win();
         break;
 
         case "scissorsrock":
         case "rockpaper":
         case "paperscissors":
-        lose()
+        lose();
         break;
 
         case "rockrock":
         case "paperpaper":
         case "scissorsscissors":
-        draw()
+        draw();
         break;
     }
 }
