@@ -11,14 +11,23 @@ body {
 }
 
 header {
-    padding: 20px;
+    padding: 10px;
     background-color: navy;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
 }
 
 header h1 {
     text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+header p {
+    text-align: center;
+    font-size: 1.2em;
+    font-style: italic;
+    margin-bottom: 8px;
 }
 
 #user-message {
@@ -26,6 +35,8 @@ header h1 {
     font-size: 1.5em;
     margin: 20px 0;
 }
+
+/* Rock, paper, scissors buttons */
 
 .choices {
     text-align: center;
@@ -37,8 +48,8 @@ header h1 {
     display: inline-block;
     background: #333;
     border: 10px;
-    padding: 5px;
     border-radius: 50%;
+    padding: 5px;
     margin: 0 30px;
 }
 
@@ -47,11 +58,15 @@ header h1 {
     cursor:pointer;
 }
 
+/* Player and computer selections */
+
 #selections {
     text-align: center;
     font-size: 1.3em;
     margin-bottom: 20px;
 }
+
+/* Winner result */
 
 #result {
     text-align: center;
@@ -59,6 +74,8 @@ header h1 {
     font-size: 2.2em;
     font-weight: bold;
 }
+
+/* Scoreboard */
 
 #scores {
     background-color: navy;
@@ -72,7 +89,7 @@ header h1 {
 }
 
 .label {
-    font-size: 0.4em;
+    font-size: 0.45em;
     font-weight: bold;
     padding: 2px 10px;
 }
@@ -91,6 +108,8 @@ header h1 {
     position: absolute;
 }
 
+/* Reset button */
+
 #reset-btn {
     text-align: center;
 }
@@ -108,4 +127,67 @@ header h1 {
 #reset:hover {
     color: white;
     background-color:navy;
+}
+
+/* Media queries */
+
+@media (max-width: 425px){
+
+    header {
+        font-size: 1.1rem;
+    }
+    
+    header p {
+        font-size: 1em;
+    }
+    
+    #user-message {
+        font-size: 1.3em;
+    }
+    .choice {
+        margin: 15px 10px;
+    }
+
+    #scores {
+        width: 120px;
+    }
+
+    .label {
+        font-size: 0.4em;
+    }
+
+    #player-label {
+        left: -110px;
+    }
+    
+    #computer-label {
+        right: -150px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    #scores {
+        width: 100px;
+        padding: 10px;
+    }
+    #player-score {
+        font-size: 0.6em;
+    }
+
+    #computer-score {
+        font-size: 0.6em;
+    }
+
+    .label {
+        font-size: 0.35em;
+    }
+
+    #player-label {
+        left: -100px;
+    }
+    
+    #computer-label {
+        right: -140px;
+    }
 }

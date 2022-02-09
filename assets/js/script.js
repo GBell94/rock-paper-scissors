@@ -4,16 +4,21 @@ const resultDiv = document.getElementById('result');
 const selectionsDiv = document.getElementById('selections');
 const playerScoreSpan = document.getElementById('player-score');
 const computerScoreSpan = document.getElementById('computer-score');
-//const computerChoice = getComputerChoice();
 const options = ['rock', 'paper', 'scissors'];
 
+/* 
+* Generate computer choice using random number
+*/
 function getComputerChoice() {
-    //let options = ["rock", "paper", "scissors"];
-    //let randomNumber = Math.floor(Math.random() * 3);
-    //return options[randomNumber]; 
     const randomChoice = options[Math.floor(Math.random() * options.length)];
     computerChoice = randomChoice;
 } 
+
+/* 
+* Add event listeners to all buttons
+* Get player's choice
+* Add player and computer choices to DOM
+*/
 
 let buttons = document.getElementsByTagName('button');
 for (let button of buttons) {
@@ -28,11 +33,14 @@ for (let button of buttons) {
             <p>You chose: ${playerChoice}</p>
             <p>Computer chose: ${computerChoice}</p>
             `;
-            //console.log(playerChoice);
-            //console.log(computerChoice);
         }
     });
 }
+
+/* 
+* Get the game result by comparing the string values
+* of the player and computer choices
+*/
 
 function getResult(playerChoice, computerChoice) {
     switch (playerChoice + computerChoice) {
@@ -56,33 +64,38 @@ function getResult(playerChoice, computerChoice) {
     }
 }
 
-function win(playerChoice, computerChoice) {
+/* 
+* Player wins - increment score and add win to DOM
+*/
+
+function win() {
     playerScore++;
     playerScoreSpan.innerHTML = playerScore;
-   //selectionsDiv.innerHTML = `
-   // <p>You chose: ${playerChoice}</p>
-    //<p>Computer chose: ${computerChoice}</p>
-    //`;
     resultDiv.innerHTML = `<p>You Win!</p>`;
 }
 
-function lose(playerChoice, computerChoice) {
+/* 
+* Player loses - increment computer's score and
+* add a computer win to DOM
+*/
+
+function lose() {
     computerScore++;
     computerScoreSpan.innerHTML = computerScore;
-   // selectionsDiv.innerHTML = `
-   // <p>You chose: ${playerChoice}</p>
-    //<p>Computer chose: ${computerChoice}</p>
-   // `;
     resultDiv.innerHTML = `<p>Computer Wins ...</p>`;
 }
 
-function draw(playerChoice, computerChoice) {
-    //selectionsDiv.innerHTML = `
-    //<p>You chose: ${playerChoice}</p>
-    //<p>Computer chose: ${computerChoice}</p>
-    //`;
+/* 
+* Draw - scores not affected, add draw to DOM
+*/
+
+function draw() {
     resultDiv.innerHTML = `<p>It's a draw</p>`;
 }
+
+/* 
+* Resets game to start over
+*/
 
 function resetGame() {
     playerScore = 0;
