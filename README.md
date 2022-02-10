@@ -1,6 +1,6 @@
 # Rock-Paper-Scissors
 
-Although very simple, Rock, Paper Scissors is a centuries-old game involving strategy and decision-making. When played in-person, it can become possible to detect your opponent's behaviour and predict their moves. When playing against a computer, whose choices are random, the game is much fairer.
+Although very simple, Rock, Paper, Scissors is a centuries-old game involving strategy and decision-making. When played in-person, it can become possible to detect your opponent's behaviour and predict their moves. When playing against a computer, whose choices are random, the game is much fairer.
 
 This responsive, online version is for users of all ages to enjoy. Users will quickly be able to learn the rules of the game and practise their decision-making skills, whilst having fun.
 
@@ -14,6 +14,16 @@ The simple colour scheme and Roboto sans serif font were chosen to maximise read
 
 Users may access the site on a range of device sizes, from mobile to desktop, and the design reflects this. Media queries ensure that the site remains easy to read and use on mobile. 
 
+### *Game site*
+
+![game initial state screenshot](/DOCS/Game-start-screenshot.png)
+
+This image shows the start of the game and is also where the user is returned on clicking the 'restart' button. 
+
+![game in play screenshot](/DOCS/Game-screenshot.png)
+
+This is the game during play, where the results and winner are displayed.
+
 ### *Header* 
 
 ![header screenshot](/DOCS/Game-header-screenshot.png)
@@ -24,13 +34,13 @@ The header clearly displays the game name and also adds a brief overview of the 
 
 ![game buttons screenshot](/DOCS/Game-buttons-screenshot.png)
 
-Users are given a clear instruction to click on one of the buttons to make their choice. The images used for the game buttons are the universal hand gestures for rock, paper and scissors used when playing the game in person. They are displayed in the same order as the game name in the header. A green border is also displayed around the user's choice to highlight which button has been clicked. 
+Users are given a clear instruction to click on one of the buttons to make their choice. The images used for the game buttons are the universal hand gestures for rock, paper and scissors used when playing the game in person. They are displayed in the same order as the game name in the header. A green border is displayed around the user's choice to highlight which button has been clicked. 
 
 ### *Results*
 
 ![game result screenshot](/DOCS/Game-result-screenshot.png)
 
-Once a user has clicked a button, their choice is displayed. The computer's random choice is determined by the Javascript code and also displayed on screen. The user also receives a message to say whether they have won, the computer is the winner or it's a draw. If users are unsure of the button images, the display quickly helps them to learn. By also being able to see the computer's choice, users can also see the logic behind the results.
+Once a user has clicked a button, their choice is displayed. The computer's random choice is determined by the Javascript code and also displayed on screen. The user also receives a message to say whether they have won, the computer is the winner or it's a draw. If users are unsure of the button images, the display quickly helps them to learn. By also being able to see the computer's choice, users can also understand the logic behind the results if they are new to the game.
 
 ### *Score*
 
@@ -43,16 +53,6 @@ Here users can see the scores for themselves and the computer updated as appropr
 ![restart button screenshot](/DOCS/Game-reset-screenshot.png)
 
 The restart game button allows the user to clear the scores and results area and start a new game.
-
-### *Game site*
-
-![game initial state screenshot](/DOCS/Game-start-screenshot.png)
-
-This image shows the start of the game and is also where the user is returned on clicking the 'restart' button. 
-
-![game in play screenshot](/DOCS/Game-screenshot.png)
-
-This image shows the game during play, where the results and winner are displayed.
 
 ### *Features to implement*
 
